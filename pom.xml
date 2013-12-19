@@ -19,6 +19,30 @@
                     <target>1.6</target>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.2.1</version>
+                <configuration>
+                    <includeProjectDependencies>false</includeProjectDependencies>
+                    <includePluginDependencies>true</includePluginDependencies>
+                    <!-- <executableDependency>
+                        <groupId>com.example.myproject</groupId>
+                        <artifactId>mylib</artifactId>
+                    </executableDependency> -->
+                    <mainClass>PhoenixBenchmark</mainClass>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>phoenix</groupId>
+                        <artifactId>phoenix</artifactId>
+                        <version>2.2.0</version>
+                        <scope>system</scope>
+                        <systemPath>${basedir}/phoenix-2.2.0-client.jar</systemPath>
+                    </dependency>
+                </dependencies>
+            </plugin>
         </plugins>
     </build>
 
