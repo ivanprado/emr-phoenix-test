@@ -1,6 +1,7 @@
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
 import com.beust.jcommander.ParameterException;
+import com.salesforce.phoenix.jdbc.PhoenixDriver;
 import com.splout.db.benchmark.SploutBenchmark;
 import org.joda.time.DateTime;
 import org.joda.time.Days;
