@@ -25,7 +25,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>1.2.1</version>
                 <configuration>
-                    <includeProjectDependencies>false</includeProjectDependencies>
+                    <includeProjectDependencies>true</includeProjectDependencies>
                     <includePluginDependencies>true</includePluginDependencies>
                     <!-- <executableDependency>
                         <groupId>com.example.myproject</groupId>
