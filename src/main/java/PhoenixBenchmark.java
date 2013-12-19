@@ -69,6 +69,8 @@ public class PhoenixBenchmark {
       String feature = features[rand.nextInt(features.length)];
       String date = initDate.plus(Period.days(rand.nextInt(days))).toString("yyyy-MM-dd");
 
+
+
       String query = "SELECT host, domain, feature, day, count(*) FROM performance WHERE host='%1' AND domain='%2' AND feature = '%3' and day = '%4' GROUP BY host, domain, feature, day";
       query = query.replace("%1", host).replace("%2", domain).replace("%3", feature).replace("%4", date);
 
@@ -82,6 +84,9 @@ public class PhoenixBenchmark {
       } else {
         return 0;
       }
+      } catch(Exception e) {
+        System.out.println(query);
+        throw e;
       } finally {
         rs.close();
         stmt.close();
